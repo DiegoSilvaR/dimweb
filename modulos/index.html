@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+    <title>Dimensión S.A.</title>
+    <link rel="icon" href="../assets/images/icono.ico" type="image/x-icon">
+    <!-- dim-core-js -->
+    <script src="../assets/js/hyper-config.js"></script>
+    <!-- dim-core-js -->
+    <!-- dim-core-css -->
+    <link rel="stylesheet" href="../assets/css/app-saas.min.css" class="app-style">
+    <link rel="stylesheet" href="../assets/css/icons.min.css">
+    <link rel="stylesheet" href="../assets/css/spinner.css">
+    <link rel="stylesheet" href="../assets/css/Estilos.css">
+    <link rel="stylesheet" href="../assets/css/fuentes.css">
+    <!-- dim-core-css -->
+    <style>
+        .map  {
+            filter:  grayscale(100%)  !important;
+        }
+    </style>
+    <!-- dim-web experimental -->
+    <link rel="stylesheet" href="../assets/css/contacto.css">
+    <link href="../assets/css/font-awesome-all.css" rel="stylesheet">
+    <link href="../assets/css/flaticon.css" rel="stylesheet">
+    <link href="../assets/css/owl.css" rel="stylesheet">
+    <link href="../assets/css/jquery.fancybox.min.css" rel="stylesheet">
+    <link href="../assets/css/animate.css" rel="stylesheet">
+    <link href="../assets/css/nice-select.css" rel="stylesheet">
+    <link href="../assets/css/elpath.css" rel="stylesheet">
+    <link href="../assets/css/color/theme-color.css" id="jssDefault" rel="stylesheet">
+    <link href="../assets/css/switcher-style.css" rel="stylesheet">
+    <link href="../assets/css/rtl.css" rel="stylesheet">
+    <link href="../assets/css/style.css" rel="stylesheet">
+    <link href="../assets/css/module-css/banner.css" rel="stylesheet">
+    <link href="../assets/css/module-css/feature.css" rel="stylesheet">
+    <link href="../assets/css/module-css/about.css" rel="stylesheet">
+    <link href="../assets/css/module-css/service.css" rel="stylesheet">
+    <link href="../assets/css/module-css/calculator.css" rel="stylesheet">
+    <link href="../assets/css/module-css/video.css" rel="stylesheet">
+    <link href="../assets/css/module-css/funfact.css" rel="stylesheet">
+    <link href="../assets/css/module-css/apps.css" rel="stylesheet">
+    <link href="../assets/css/module-css/testimonial.css" rel="stylesheet">
+    <link href="../assets/css/module-css/news.css" rel="stylesheet">
+    <link href="../assets/css/module-css/subscribe.css" rel="stylesheet">
+    <link href="../assets/css/responsive.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- dim-web experimental -->
+    <!-- fondo principal -->
+    <style>
+        footer ul li a {
+            color: inherit;
+            padding: 0px 4% !important;
+            font-weight: normal;
+            font-size: 18px;
+            text-transform: none;
+            border-radius: 0px;
+            text-decoration: none;
+            position: relative;
+            display: block;
+        }
+
+        .funfact-section .inner-container {
+            position: relative;
+            display: block;
+            box-shadow: 0px 10px 50px 0px #0000001A;
+            background: #fff;
+            margin-top: 0px !important;
+            z-index: 2;
+        }
+    </style>
+    <style type="text/css">
+        .carousel-inner {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            height: 85.2vh;
+        }
+        .img {
+            width: 185px;
+            animation: scroll 90s linear infinite;
+        }
+        .slide-track {
+            width: 100%;
+            display: flex;
+            gap: 3em;
+            overflow: hidden;
+        }
+
+        .slider {
+            margin-top: 8vh;
+            background-color: none;
+            padding: 0em 0em;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-3500%)
+            }
+        }
+
+        canvas {
+            position: fixed;
+            top: 0;
+            left: -2px;
+            width: 100vw;
+            height: 90vh;
+            outline: none;
+            pointer-events: none;
+        }
+
+        .dg.ac {
+            display: none;
+        }
+    </style>
+    <style>
+        gmp-map {
+            height: 100%;
+        }
+    </style>
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkdJrjTVpouf7PsXN2S0FckSNJUL0IzGg&callback=console.debug&libraries=maps,marker&v=beta"> </script>
+</head>
+
+<body class="p-0 m-0 scrolling">
+    <div class="boxed_wrapper ltr">
+        <!-- preloader -->
+        <div class="loader-wrap">
+            <div class="preloader">
+                <div class="contents mt-4" style="z-index: 10000">
+                    <div class="loader-image-wrapper">
+                        <div class="loader-inner loader-image">
+                            <img alt="" class="img-1" src="../assets/images/loader.png" />
+                            <img alt="" class="img-2" src="../assets/images/loader.png" />
+                            <img alt="" class="img-3" src="../assets/images/loader.png" />
+                            <img alt="" class="img-4" src="../assets/images/loader.png" />
+                        </div>
+                    </div>
+                    <div class="contents mt-4">
+                        <div class="s1">
+                            <div class="s2">
+                                <div class="s3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="preloader-close">cerrar</div> -->
+                <div id="handle-preloader" class="handle-preloader">
+                    <div class="animation-preloader mt-5">
+                        <div class="txt-loading">
+                            <span data-text-preloader="D" class="letters-loading">D
+                            </span>
+                            <span data-text-preloader="I" class="letters-loading">I
+                            </span>
+                            <span data-text-preloader="M" class="letters-loading">M
+                            </span>
+                            <span data-text-preloader="E" class="letters-loading">E
+                            </span>
+                            <span data-text-preloader="N" class="letters-loading">N
+                            </span>
+                            <span data-text-preloader="S" class="letters-loading">S
+                            </span>
+                            <span data-text-preloader="I" class="letters-loading">I
+                            </span>
+                            <span data-text-preloader="O" class="letters-loading">O
+                            </span>
+                            <span data-text-preloader="N" class="letters-loading">N
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- preloader -->
+        <header class="main-header">
+            <div class="menu-area ">
+                <!--Mobile Navigation Toggler-->
+                <div class="mobile-nav-toggler">
+                    <i class="icon-bar"></i>
+                    <i class="icon-bar"></i>
+                    <i class="icon-bar"></i>
+                </div>
+                <nav class="main-menu navbar-expand-md navbar-light clearfix d-lg-none ">
+                    <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
+                        <ul class="navigation scroll-nav clearfix">
+                            <li><a style="font-family: Dimbold;" href="#hero-tab">INICIO</a></li>
+                            <li><a style="font-family: Dimbold;" href="#tab-es6">EMPRESA</a></li>
+                            <li><a style="font-family: Dimbold;" href="#tab-flexbox">SERVICIOS</a></li>
+                            <li><a style="font-family: Dimbold;" href="#tab-react">PRODUCTOS</a></li>
+                            <li><a style="font-family: Dimbold;" href="#tab-angular">SITIOS</a></li>
+                            <li><a style="font-family: Dimbold;" href="#contactos">CONTACTOS</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <!-- Mobile Menu  -->
+            <div class="mobile-menu">
+                <div class="menu-backdrop"></div>
+                <div class="close-btn"><i class="fas fa-times"></i></div>
+                <nav class="menu-box ">
+                    <div class="nav-logo"><a href="index.html"><img src="../assets/images/logodim.png" alt=""
+                                title=""></a></div>
+                    <div class="menu-outer">
+                        <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
+                    <div class="contact-info">
+                        <h4>Contacto</h4>
+                        <ul>
+                            <li><i class="icon-1 me-1"></i><a href="mailto:dimension@dim.cl">dimension@dim.cl</a></li>
+                            <li><i class="icon-2 me-1"></i>(56) 22 675 3200</li>
+                        </ul>
+                    </div>
+                    <div class="social-links">
+                        <ul class="clearfix">
+                            <li><a href="index.html"><span class="fab fa-twitter"></span></a></li>
+                            <li><a href="index.html"><span class="fab fa-facebook-square"></span></a></li>
+                            <li><a href="index.html"><span class="fab fa-pinterest-p"></span></a></li>
+                            <li><a href="index.html"><span class="fab fa-instagram"></span></a></li>
+                            <li><a href="index.html"><span class="fab fa-youtube"></span></a></li>
+                        </ul>
+                    </div>
+                    <header class="main-header">
+                </nav>
+            </div>
+        </header>
+        <!-- Hero -->
+        <div class="wrapper">
+            <div class=" navbar-custom d-none d-lg-block">
+                <div class="topbar">
+                    <!-- main header -->
+                    <div class=" et-hero-tabs-container d-lg-flex d-none">
+                        <a class="et-hero-tab" href="#hero-tab">INICIO</a>
+                        <a class="et-hero-tab" href="#tab-es6">EMPRESA</a>
+                        <a class="et-hero-tab" href="#tab-flexbox">SERVICIOS</a>
+                        <a class="et-hero-tab" href="#tab-react">PRODUCTOS</a>
+                        <a class="et-hero-tab" href="#tab-angular">SITIOS</a>
+                        <a class="et-hero-tab" href="#contactos">CONTACTOS</a>
+                        <span class="et-hero-tab-slider "></span>
+                        <ul class="topbar-menu d-flex align-items-center gap-3">
+                            <li class="dropdown d-lg-none">
+                                <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#"
+                                    role="button" aria-haspopup="false" aria-expanded="false">
+                                    <i class="ri-search-line font-22"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-animated dropdown-lg p-0">
+                                    <form class="p-3">
+                                        <input type="search" class="form-control" placeholder="Buscar ..."
+                                            aria-label="Recipient's username" />
+                                    </form>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="logo">
+                                    <img src="../assets/images/dimred.png " width=" 160" alt="Dimension"
+                                        class="navbar-brand">
+                                </a>
+                            </li>
+                            <li class="d-none d-sm-inline-block">
+                                <div class="nav-link " id="light-dark-mode" data-bs-toggle="tooltip"
+                                    data-bs-placement="left" title="COLOR MODE">
+                                    <i class="mdi  mdi-atom-variant  mdi-24px"></i>
+                                </div>
+                            </li>
+                            <li class="d-none d-md-inline-block">
+                                <a class="nav-link" href="" data-toggle="fullscreen">
+                                    <i class="ri-fullscreen-line font-22"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- ========== Sidebar ========== -->
+            <div class="leftside-menu border-0 rounded-0 ">
+                <!-- Brand Logo Light -->
+                <a class="logo logo-light mt-0 mb-2 ">
+                    <span class="logo-lg justify-content-center">
+                        <img src="../assets/images/logo.png" alt="logo"></span>
+                    <span class="logo-sm mt-0 mb-2 justify-content-center">
+                        <img src="../assets/images/logo-sm.png" alt="small logo"></span>
+                </a>
+                <!-- Brand Logo Dark -->
+                <a class="logo logo-dark mt-0 mb-2">
+                    <span class="logo-lg justify-content-center">
+                        <img src="../assets/images/logo-dark.png" alt="dark logo"></span>
+                    <span class="logo-sm mt-0 mb-2 justify-content-center">
+                        <img src="../assets/images/logo-dark-sm.png" alt="small logo"></span>
+                </a>
+                <!-- Sidebar Hover Menu Toggle Button -->
+                <div class="button-sm-hover" data-bs-toggle="tooltip" data-bs-placement="right"
+                    title="Mantener Sidebar">
+                    <i class="ri-checkbox-blank-circle-line align-middle"></i>
+                </div>
+                <!-- Full Sidebar Menu Close Button -->
+                <div class="button-close-fullsidebar">
+                    <i class="ri-close-fill align-middle"></i>
+                </div>
+                <!-- Leftbar User -->
+                <div class="leftbar-user">
+                    <a class="avatar-sm float-left mr-2" href="../../../Modulos/Inicio/rightframe_archivos/Inicio.aspx">
+                        <img id="imgPerfilsidebar" src="../assets/images/users/avatar-1.png" alt="user-image"
+                            style="height: 150px;" class="p-2 shadow-in avatar-img rounded-circle">
+                        <span class="leftbar-user-name mt-0 d-none">Anna Sanders</span>
+                    </a>
+                    <div class="info">
+                        <a data-toggle="collapse" href="#collapseExample" aria-expanded="true">
+                            <span style="color: #faaec2">
+                                <span class="user-level d-none">ADMINISTRADOR</span>
+                                <span class="caret"></span>
+                            </span>
+                        </a>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="app-search dropdown d-none ">
+                        <form action="1">
+                            <div class="input-group mx-2 my-1 shadow-in p-1">
+                                <input type="search" class="form-control dropdown-toggle" placeholder="Buscar..."
+                                    id="search" />
+                                <span class="mdi mdi-magnify search-icon mt-1 ms-1"></span>
+                                <button class="input-group-text btn btn-danger" type="submit">Buscar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div style="height: 68.7vh;" id="leftside-menu-container" data-simplebar="">
+                    <ul class="side-nav mt-2">
+                        <li class="side-nav-title text-center fs-4">INTERFACTOR</li>
+                        <li runat="server" id="li1" class="side-nav-item">
+                            <a data-bs-toggle="collapse" class="side-nav-link" aria-expanded="false" href="#11000000">
+                                <i class="uil uil-user"></i>
+                                <span>CLIENTES</span>
+                            </a>
+                            <div class="collapse" id="11000000">
+                                <ul class="side-nav-second-level" id="ul1">
+                                    <li id="ma2">
+                                        <a id="C_Clientes" class="sub-item">Carpeta Clientes</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li runat="server" id="C01" class="side-nav-item">
+                            <a data-bs-toggle="collapse" class="side-nav-link" aria-expanded="false" href="#21000000">
+                                <i class="uil uil-moneybag"></i>
+                                <span>CURSATURAS</span>
+                            </a>
+                            <div class="collapse " id="21000000">
+                                <ul class="side-nav-second-level" id="ul3">
+                                    <li id="C02">
+                                        <a class="sub-item" id="C_Electronica">Cursatura Electrónica</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li runat="server" id="AS1" class="side-nav-item">
+                            <a data-bs-toggle="collapse" class="side-nav-link" aria-expanded="false" href="#101000000">
+                                <i class="ri ri-currency-line"></i>
+                                <span>INFORMES</span>
+                            </a>
+                            <div class="collapse " id="101000000">
+                                <ul class="side-nav-second-level" id="ul4" runat="server">
+                                    <li id="AS2" runat="server" visible="false"><a
+                                            href="../../CargaStock/paginas/MantAPlanoVehiculo.aspx">
+                                            <span class="sub-item">Ver Informe</span></a></li>
+
+                                </ul>
+                            </div>
+                        </li>
+                        <li runat="server" id="li5" class="side-nav-item">
+                            <a data-bs-toggle="collapse" class="side-nav-link" aria-expanded="false" href="#41000000">
+                                <i class="ri ri-global-line"></i>
+                                <span>ADMINISTRACIÓN</span>
+                            </a>
+                            <div class="collapse " id="41000000">
+                                <ul class="side-nav-second-level" id="ul2" runat="server">
+                                    <li id="Pl1">
+                                        <a class="sub-item" id="M_Usuarios">Usuarios</a>
+                                    </li>
+                                    <li id="Pl2" runat="server" visible="false"><a><span class="sub-item">
+                                                Plantillas Perfiles</span></a></li>
+                                    <li id="Pl3"><a><span class="sub-item">
+                                                Esquema de Aprobaciones</span></a></li>
+                                    <li id="Pl4">
+                                        <a class="sub-item" id="EA_Aprobacion">Esquema de Aprobaciones por Sucursal</a>
+                                    </li>
+                                    <li id="Pl5" runat="server" visible="false"><a><span class="sub-item">
+                                                Parámetros varios</span></a></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                    </ul>
+                    <div>
+                    </div>
+                    <div class="scroll-element scroll-x">
+                        <div class="scroll-element_outer">
+                            <div class="scroll-element_size">
+                            </div>
+                            <div class="scroll-element_track">
+                            </div>
+                            <div class="scroll-bar ui-draggable ui-draggable-handle" style="width: 100px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="scroll-element scroll-y">
+                        <div class="scroll-element_outer">
+                            <div class="scroll-element_size">
+                            </div>
+                            <div class="scroll-element_track">
+                            </div>
+                            <div class="scroll-bar ui-draggable ui-draggable-handle" style="height: 100%;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Topbar Brand Logo -->
+                <div class="leftbar-user">
+                    <div class="app-search dropdown d-none"></div>
+                    <footer class="side-nav-title footer justify-content-center d-flex"
+                        style="width: 300px; height: 60px; background: #f0ffff00 !important;">
+                        <div class="col-lg-12 justify-content-center text-center">
+                            <a href="https://www.dimension.cl" target="_blank">
+                                <img alt="" src="../assets/images/powerby.svg" height="40px" />
+                            </a>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+            <!-- ========== Sidebar ========== -->
+        </div>
+        <div class="wrapper">
+            <div class="content-page p-0">
+                <section class=" et-hero-tabs banner-section p_relative" id="hero-tab">
+                    <div class="banner-carousel owl-theme owl-carousel owl-dots-none ">
+                        <div class="slide-item p_relative">
+                            <div class="bg-layer" style="background-image: url(../assets/images/banner/banner-1.jpg);">
+                            </div>
+                            <div class="pattern-layer">
+                                <div class="pattern-1"
+                                    style="background-image: url(../assets/images/shape/shape-1.png);"></div>
+                                <div class="pattern-2"
+                                    style="background-image: url(../assets/images/shape/shape-2.png);"></div>
+                            </div>
+                            <div class="auto-container">
+                                <div class="content-box">
+                                    <h2>AMPLIA GAMA DE <span>SERVICIOS</span></h2>
+
+                                    <div class="btn-box">
+                                        <a href="index.html" class="theme-btn btn rounded-pill"
+                                            style="background-color:#acacac; font-family: Roboto;">Leer Mas..</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide-item p_relative">
+                            <div class="bg-layer" style="background-image: url(../assets/images/banner/banner-2.jpg);">
+                            </div>
+                            <div class="pattern-layer">
+                                <div class="pattern-1"
+                                    style="background-image: url(../assets/images/shape/shape-1.png);"></div>
+                                <div class="pattern-2"
+                                    style="background-image: url(../assets/images/shape/shape-2.png);"></div>
+                            </div>
+                            <div class="auto-container">
+                                <div class="content-box">
+                                    <h2>AMPLIA GAMA DE <span>PRODUCTOS</span></h2>
+                                    <div class="btn-box">
+                                        <a href="index.html" class="theme-btn btn rounded-pill"
+                                            style="background-color:#acacac; font-family: Roboto;">Leer Mas..</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide-item p_relative">
+                            <div class="bg-layer" style="background-image: url(../assets/images/banner/banner-3.jpg);">
+                            </div>
+                            <div class="pattern-layer">
+                                <div class="pattern-1"
+                                    style="background-image: url(../assets/images/shape/shape-1.png);"></div>
+                                <div class="pattern-2"
+                                    style="background-image: url(../assets/images/shape/shape-2.png);"></div>
+                            </div>
+                            <div class="auto-container">
+                                <div class="content-box">
+                                    <h2>EFICIENTE<span>SOPORTE TI</span></h2>
+                                    <div class="btn-box">
+                                        <a href="index.html" class="theme-btn btn rounded-pill"
+                                            style="background-color:#acacac; font-family: Roboto;">Leer Mas..</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Main -->
+                <main class="et-main ">
+                    <section class="et-slide glass2" id="tab-es6">
+                        <h1 class="px-2 py-3 mb-0  mt-0 h-login shadow-out">EMPRESA</h1>
+                        <div class="pattern-layer rotate-me"></div>
+                        <div class="auto-container">
+                            <div class="row clearfix">
+                                <div class="col-lg-5 col-md-12 col-sm-12 image-column">
+                                    <div class="image_block_one">
+                                        <div class="image-box  ">
+                                            <div class="image-shape"
+                                                style="background-image: url(../assets/images/shape/shape-3.png);">
+                                            </div>
+                                            <figure class="image"><img src="../assets/images/resource/about-1.jpg"
+                                               class="rounded-4 shadow-in border-4"     alt=""></figure>
+                                            <div class="rating-box h-login2 shadow-out">
+                                                <ul class="rating mb_5 clearfix">
+                                                    <li><i class="icon-9"></i></li>
+                                                    <li><i class="icon-9"></i></li>
+                                                    <li><i class="icon-9"></i></li>
+                                                    <li><i class="icon-9"></i></li>
+                                                    <li><i class="icon-9"></i></li>
+                                                </ul>
+                                                <h6>LIDERES EN EL MERCADO</h6>
+                                            </div>
+                                            <div class="experience-box d-none d-lg-block shadow-out">
+                                                <div class="inner ">
+                                                   <img src="../assets/images/n1.svg" alt="" class="p-2 shadow-in rounded-circle" style="width: 122px; height: 122px;" srcset="">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-7 col-md-12 col-sm-12 content-column">
+                                    <div class="content_block_one ">
+                                        <div class="content-box glass2 rounded-4 border-4 shadow-in p-2">
+                                            <div class="sec-title mb_20">
+                                                <h2 class="text-danger"
+                                                    style="font-family: dimbold;text-shadow: 1px 1px 4px #00000090;font-size: 2.2em;">
+                                                    MAS DE 30 AÑOS DE EXPERIENCIA</h2>
+                                            </div>
+                                            <div class="text-box p-1 px-3">
+                                                <p style="text-align: justify;">
+                                                    DIMENSION S.A. desde sus orígenes, hace ya más de treinta años, se definió como objetivo participar en la industria de Tecnologías de la Información, con soluciones propias y a la medida de las reales necesidades de las empresas del área financiera.
+                                                    El campo de acción de DIMENSION S.A. se circunscribe a todas aquellas materias donde el uso y experiencia del conocimiento aplicado en Tecnologías de la Información, permite entregar soluciones que aporten un valor agregado a nuestras áreas de interés o a solucionar problemas y requerimientos de nuestros clientes.</p>
+                                                    <hr>
+                                                    <p style="text-align: justify;">
+                                                    Hemos alcanzado una posición de liderazgo en el desarrollo de soluciones de software orientados a la Industria del Factoring, con nuestro exitoso Sistema Operacional de Factoring. Además, hemos desarrollado una serie de productos complementarios orientados a esta Industria como: Cobranza de Documentos Operados, Contabilidad y Conciliación Bancaria, Carta Guía Electrónica, Factoring Móvil, Información de Factoring a los Clientes y Ejecutivos vía Internet, Manejo de Sucursales, Confirming, Créditos, Leasing Financiero, Tesorería, Control de Pasivos, Factoring Digital, etc.
+                                                    </p>
+                                                    <hr>
+                                                </div>
+                                                <div class="text-box p-1 px-3 scrolling" style="overflow-y: auto; max-height: 26vh;">
+                                                    <h4 class=" opacity-100 text-start text-danger">Servicios de Software</h4>
+                                                    <p style="text-align: justify;">No obstante, dado nuestro éxito alcanzado en el producto Factoring, continuamos buscando y explorando nuevas oportunidades tecnológicas de manera permanente. Como un ejemplo de ello, podemos mencionar a numerosos Sistemas de Información desarrollados para instituciones públicas y privadas, basados en conceptos como workflow y reingeniería de sistemas. Podemos agregar a lo anterior nuestra capacidad, con un gran equipo de profesionales, para adecuar nuestros sistemas e integrarnos con diversos ambientes en las instalaciones de nuestros clientes, como Bancos y Empresas Financieras de gran tamaño, y que nuestros Productos se encuentran operativos en empresas grandes, medianas y pequeñas.</p>
+                                                    <h4 class=" opacity-100 text-start text-danger">Servicios de Hardware</h4>
+                                                    <p style="text-align: justify;">Además de proveer servicios de software, podemos apoyar a nuestros clientes con su infraestructura tecnológica para desplegar los programas y ambiente requerido, por medio del arriendo de servidores, con las licencias necesarias, equipos de red, apoyo en la instalación o configuración de su red y mantención de los equipos. Proveemos servicios de hosting para sitios web de nuestros clientes.</p>
+                                                    <h4 class=" opacity-100 text-start text-danger">Comunicaciones e Internet</h4>
+                                                    <p style="text-align: justify;">Asesoramos a nuestros clientes en la contratación y configuración de su servicio de acceso a internet, proveemos equipos de comunicación como routers y switches, soluciones de correo electrónico y de acceso remoto a sus instalaciones. Diseñamos y construimos sitios web para nuestros clientes, con información comercial y de posición a sus clientes, para consultas y auto atención. .</p>
+                                                </div>
+                                             
+                                                <hr>
+                                            <div class="btn-box">
+                                                <a href="index.html" class="btn theme-btn rounded-pill" style="background-color:#acacac; font-family: Roboto;">Leer Mas...</a>
+                                            </div>
+                                          
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="et-slide feature-section glass2" id="tab-flexbox">
+                        <h1 class="px-2 py-3 mb-3  mt-0 h-login shadow-out">SERVICIOS</h1>
+                        <div class="auto-container2 ">
+                            <div class="inner-container clearfix wow fadeInLeft animated animated glass2"
+                                data-wow-delay="00ms" data-wow-duration="1500ms"
+                                style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInLeft;">
+                                <div class="feature-block-one ">
+                                    <div class="inner-box">
+                                        <div class="icon-box"><i class="icon-5  p-2 shadow-in rounded-circle"></i></div>
+                                        <h4><a href="index.html">Aplicaciones y sistemas</a></h4>
+                                        <p>
+                                        </p>
+                                        <p>Análisis de Requerimientos</p>
+                                        <p>Diseño</p>
+                                        <p>Desarrollo o Construcción</p>
+                                        <p>Puesta en Marcha</p>
+                                        <p>Procesamiento de sistemas</p>
+                                        <p>Respaldos</p>
+                                        <p>Soporte</p>
+                                        <p>Mantención</p>
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div class="feature-block-one">
+                                    <div class="inner-box">
+                                        <div class="icon-box"><i class="icon-6  p-2 shadow-in rounded-circle"></i></div>
+                                        <h4><a href="index.html">Internet</a></h4>
+                                        <p>
+                                        </p>
+                                        <p>Desarrollo de sitios web</p>
+                                        <p>Soluciones de correo electrónico</p>
+                                        <p>Webhosting</p>
+                                        <p>Puesta en Marcha</p>
+                                        <p>Seguridad</p>
+                                        <p>Mantención</p>
+                                        <p>Soporte</p>
+                                        <p>Gestión de dominios</p>
+
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div class="feature-block-one">
+                                    <div class="inner-box">
+                                        <div class="icon-box"><i class="icon-7  p-2 shadow-in rounded-circle"></i></div>
+                                        <h4><a href="index.html">Asesorías</a></h4>
+                                        <p>
+                                        </p>
+                                        <p>Apoyo en definición de procesos</p>
+                                        <p>Evaluación de la plataforma tecnológica</p>
+                                        <p>Definición de ambiente de producción</p>
+                                        <p>Definición de requerimientos para redes locales</p>
+                                        <p>Definición requerimientos para Intranet e Internet</p>
+                                        <p>Diagnóstico situación tecnológica actual</p>
+                                        <p>Analisis de ofertas tecnológicas de proveedores</p>
+                                        <p>Apoyo en reuniones técnicas</p>
+
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div class="feature-block-one">
+                                    <div class="inner-box">
+                                        <div class="icon-box"><i class="icon-8  p-2 shadow-in rounded-circle"></i></div>
+                                        <h4><a href="index.html">Equipamiento y Comunicaciones</a></h4>
+                                        <p>
+                                        </p>
+                                        <p>Provisión de equipamiento en venta y arriendo</p>
+                                        <p>Equipos servidores, de redes e internet</p>
+                                        <p>Monitoreo de funcionamiento</p>
+                                        <p>Diseño, configuración e instalación de Redes</p>
+                                        <p>Administración de redes</p>
+                                        <p>Integración de sistemas</p>
+                                        <p>Soporte de operación y usuarios</p>
+                                        <p>Interacción con proveedores de comunicaciones</p>
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="funfact-section">
+                            <div class="auto-container2">
+                                <div class="inner-container clearfix bg-transparent ">
+                                    <div class="funfact-block-one">
+                                        <div class="inner-box glass2  bg-transparent">
+                                            <div class="icon-box">
+                                                <img class="p-2 shadow-in rounded-circle" src="../assets/images/pe-circle-01-128.png"
+                                                    style="width: 90px; margin-top: -15px;" alt="">
+                                            </div>
+                                            <div class="count-outer count-box counted">
+                                                <span class="count-text text-danger" data-speed="1500" data-stop="50"
+                                                    style="font-family: Dim-Regular;">PERU</span><span></span>
+                                            </div>
+                                            <p class="fs-5">6 Clientes - desde 2007</p>
+                                        </div>
+                                    </div>
+                                    <div class="funfact-block-one">
+                                        <div class="inner-box bg-transparent glass2">
+                                            <div class="icon-box ">
+                                                <img class="p-2 shadow-in rounded-circle" src="../assets/images/co-circle-01-128.png"
+                                                    style="width: 90px; margin-top: -15px;" alt="">
+                                            </div>
+                                            <div class="count-outer count-box counted">
+                                                <span class="count-text text-danger" data-speed="1500" data-stop="90"
+                                                    style="font-family: Dim-Regular;">COLOMBIA</span><span></span>
+                                            </div>
+                                            <p class="fs-5">3 Clientes - desde 2012</p>
+                                        </div>
+                                    </div>
+                                    <div class="funfact-block-one ">
+                                        <div class="inner-box  bg-transparent  glass2"
+                                            style="background: #00000000 !important;">
+                                            <div class="icon-box">
+                                                <img class="p-2 shadow-in rounded-circle" src="../assets/images/cl-circle-01-128.png"
+                                                    style="width: 90px; margin-top: -15px;" alt="">
+                                            </div>
+                                            <div class="count-outer count-box counted">
+                                                <span class="count-text text-danger" data-speed="1500" data-stop="40"
+                                                    style="font-family: Dim-Regular;">CHILE</span><span></span>
+                                            </div>
+                                            <p class="fs-5">39 Clientes - desde 1992</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </section>
+                    </section>
+                    <section class="et-slide glass2" id="tab-react">
+                        <h1 class="px-2 py-3  h-login shadow-out">NUESTROS PRODUCTOS</h1>
+                        <div class="bg-layer" style="background-image: url(assets/images/background/service-bg.jpg);">
+                        </div>
+                        <div class="auto-container">
+                            <!-- <div class="sec-title centred mb_40">
+            </div> -->
+                            <div class="row clearfix">
+                                <div class="col-lg-3 col-md-6 col-sm-12 service-block">
+                                    <div class="service-block-one wow fadeInUp animated" data-wow-delay="00ms"
+                                        data-wow-duration="1500ms">
+                                        <div class="inner-box glass2 shadow-in  border-4">
+                                            <div class="shape"></div>
+                                            <div class="icon-box"><i class="icon-22"></i></div>
+                                            <h4 style="font-family: Dim-Regular;"><a
+                                                    href="service-details.html">FACTORING</a></h4>
+                                            <ul class="list-item clearfix">
+                                                <p>Funcional y exitoso Sistema de Factoring, que ha llegado a ser un
+                                                    estandar de la industria.</li>
+                                            </ul>
+                                            <div class="btn-box fixed-bottom mb-4">
+                                                <a href="index.html" class="btn theme-btn rounded-pill"
+                                                    style="background-color:#989898; font-family: Roboto;">Leer
+                                                    Mas...</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-12 service-block">
+                                    <div class="service-block-one wow fadeInUp animated" data-wow-delay="300ms"
+                                        data-wow-duration="1500ms">
+                                        <div class="inner-box glass2 shadow-in  border-4">
+                                            <div class="shape"></div>
+                                            <div class="icon-box"><i class="icon-10"></i></div>
+                                            <h4 style="font-family: Dim-Regular;"><a
+                                                    href="service-details-2.html">CONFIRMING</a></h4>
+                                            <ul class="list-item clearfix">
+                                                <p>Eficiente sistema que permite gestionar los financiamientos
+                                                    Pagador-Proveedor en forma óptima.</li>
+                                            </ul>
+                                            <div class="btn-box fixed-bottom mb-4">
+                                                <a href="index.html" class="btn theme-btn rounded-pill"
+                                                    style="background-color:#989898; font-family: Roboto;">Leer
+                                                    Mas...</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-12 service-block">
+                                    <div class="service-block-one wow fadeInUp animated" data-wow-delay="600ms"
+                                        data-wow-duration="1500ms">
+                                        <div class="inner-box glass2 shadow-in  border-4">
+                                            <div class="shape"></div>
+                                            <div class="icon-box"><i class="icon-17"></i></div>
+                                            <h4 style="font-family: Dim-Regular;"><a
+                                                    href="service-details-3.html">CRÉDITO</a></h4>
+                                            <ul class="list-item clearfix">
+                                                <p>Sistema especialmente diseñado para nuestros clientes Empresas de
+                                                    Factoring, que interactúa y consolida información.</li>
+                                            </ul>
+                                            <div class="btn-box fixed-bottom mb-4">
+                                                <a href="index.html" class="btn theme-btn rounded-pill"
+                                                    style="background-color:#989898; font-family: Roboto;">Leer
+                                                    Mas...</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-12 service-block">
+                                    <div class="service-block-one wow fadeInUp animated" data-wow-delay="900ms"
+                                        data-wow-duration="1500ms">
+                                        <div class="inner-box glass2 shadow-in  border-4">
+                                            <div class="shape"></div>
+                                            <div class="icon-box"><i class="icon-15"></i></div>
+                                            <h4 style="font-family: Dim-Regular;"><a
+                                                    href="service-details-4.html">LEASING</a></h4>
+                                            <ul class="list-item clearfix">
+                                                <p>Tipo Financiero, especialmente diseñado para nuestros clientes
+                                                    Empresas de Factoring, que interactúa y consolida información.</li>
+                                            </ul>
+                                            <div class="btn-box fixed-bottom mb-4">
+                                                <a href="index.html" class="btn theme-btn rounded-pill"
+                                                    style="background-color:#989898; font-family: Roboto;">Leer
+                                                    Mas...</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-12 service-block">
+                                    <div class="service-block-one wow fadeInUp animated" data-wow-delay="00ms"
+                                        data-wow-duration="1500ms">
+                                        <div class="inner-box glass2 shadow-in  border-4">
+                                            <div class="shape"></div>
+                                            <div class="icon-box"><i class="icon-12"></i></div>
+                                            <h4 style="font-family: Dim-Regular;"><a
+                                                    href="service-details-5.html">CURSATURA</a></h4>
+                                            <ul class="list-item clearfix">
+                                                <p>Módulo independiente o integrado, que apoya al curse de operaciones
+                                                    con toda la información disponible, de riesgo y comercial.</li>
+                                            </ul>
+                                            <div class="btn-box fixed-bottom mb-4">
+                                                <a href="index.html" class="btn theme-btn rounded-pill"
+                                                    style="background-color:#989898; font-family: Roboto;">Leer
+                                                    Mas...</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-12 service-block">
+                                    <div class="service-block-one wow fadeInUp animated" data-wow-delay="300ms"
+                                        data-wow-duration="1500ms">
+                                        <div class="inner-box glass2 shadow-in  border-4">
+                                            <div class="shape"></div>
+                                            <div class="icon-box"><i class="icon-14"></i></div>
+                                            <h4 style="font-family: Dim-Regular;"><a
+                                                    href="service-details-6.html">CARPETAS</a></h4>
+                                            <ul class="list-item clearfix">
+                                                <p>Electrónicas de Clientes, consolida toda la información comercial, de
+                                                    riesgo y legal, en un ambiente ágil y seguro.</li>
+                                            </ul>
+                                            <div class="btn-box fixed-bottom mb-4">
+                                                <a href="index.html" class="btn theme-btn rounded-pill"
+                                                    style="background-color:#989898; font-family: Roboto;">Leer
+                                                    Mas...</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-12 service-block">
+                                    <div class="service-block-one wow fadeInUp animated" data-wow-delay="600ms"
+                                        data-wow-duration="1500ms">
+                                        <div class="inner-box glass2 shadow-in  border-4">
+                                            <div class="shape"></div>
+                                            <div class="icon-box"><i class="icon-13"></i></div>
+                                            <h4 style="font-family: Dim-Regular;"><a
+                                                    href="service-details-7.html">SUCURSAL DIG.</a></h4>
+                                            <ul class="list-item clearfix">
+                                                <p>Permite la autoatención de los clientes, en los diferentes productos
+                                                    financieros que ofrece la Empresa de Factoring.</li>
+                                            </ul>
+                                            <div class="btn-box fixed-bottom mb-4">
+                                                <a href="index.html" class="btn theme-btn rounded-pill"
+                                                    style="background-color:#989898; font-family: Roboto;">Leer
+                                                    Mas...</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-12 service-block">
+                                    <div class="service-block-one wow fadeInUp animated" data-wow-delay="900ms"
+                                        data-wow-duration="1500ms">
+                                        <div class="inner-box glass2 shadow-in  border-4">
+                                            <div class="shape"></div>
+                                            <div class="icon-box"><i class="icon-18"></i></div>
+                                            <h4 style="font-family: Dim-Regular;"><a
+                                                    href="service-details-8.html">TESORERÍA</a></h4>
+                                            <ul class="list-item clearfix">
+                                                <p>Consolida los egresos por operaciones de los diferentes productos
+                                                    financieros, y los flujos díarios de cuentas corrientes.</li>
+                                            </ul>
+                                            <div class="btn-box fixed-bottom mb-4">
+                                                <a href="index.html" class="btn theme-btn rounded-pill"
+                                                    style="background-color:#989898; font-family: Roboto;">Leer
+                                                    Mas...</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="et-slide glass2" id="tab-angular">
+                        <h1 class="px-2 py-3   mt-0 h-login shadow-out">SITIOS</h1>
+                        <div class="bg-layer" style="background-image: url(../assets/images/background/testimonial-bg.jpg);"></div>
+                        <div class="auto-container">
+                            <div class="sec-title mb_70 ">
+                                <h1 class="text-danger" style="font-family: Dimbold;">NUESTROS CLIENTES</h2>
+                            </div>
+                            <div class="three-item-carousel owl-carousel owl-theme owl-dots-none owl-nav-none">
+                                <div class="testimonial-block-one">
+                                    <div class="inner-box rounded-4 glass2 border-3 shadow-in">
+                                        <figure class="thumb-box shadow-in border-3 bg-white"><img
+                                                src="../assets/logos clientes/BBVA_.svg" alt=""></figure>
+                                        <h4>BBVA - Colombia</h4>
+                                        <span class="designation">Manager</span>
+                                        <ul class="rating mb_6 clearfix">
+                                            <li><i class="icon-26"></i></li>
+                                            <li><i class="icon-26"></i></li>
+                                            <li><i class="icon-26"></i></li>
+                                            <li><i class="icon-26"></i></li>
+                                            <li><i class="icon-26"></i></li>
+                                        </ul>
+                                        <p>“Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque etiam
+                                            nis quis at arcu nunc neque ac integer sit lobortis diam semper nulla duis
+                                            in blandit.”</p>
+                                    </div>
+                                </div>
+                                <div class="testimonial-block-one">
+                                    <div class="inner-box  rounded-4 glass2 border-3 shadow-in">
+                                        <figure class="thumb-box shadow-in border-3 bg-white"><img
+                                                src="../assets/logos clientes/Eurocapital.svg" style="margin-top: 22px;"
+                                                alt=""></figure>
+                                        <h4>Euro-Capital</h4>
+                                        <span class="designation">Manager</span>
+                                        <ul class="rating mb_6 clearfix">
+                                            <li><i class="icon-26"></i></li>
+                                            <li><i class="icon-26"></i></li>
+                                            <li><i class="icon-26"></i></li>
+                                            <li><i class="icon-26"></i></li>
+                                            <li><i class="icon-26"></i></li>
+                                        </ul>
+                                        <p>“Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque etiam
+                                            nis quis at arcu nunc neque ac integer sit lobortis diam semper nulla duis
+                                            in blandit.”</p>
+                                    </div>
+                                </div>
+                                <div class="testimonial-block-one">
+                                    <div class="inner-box rounded-4 glass2 border-3 shadow-in">
+                                        <figure class="thumb-box shadow-in border-3 bg-white"><img
+                                                src="../assets/logos clientes/banco-pichincha.svg"
+                                                style="margin-top: 35px;" alt=""></figure>
+                                        <h4>Banco Pichincha</h4>
+                                        <span class="designation">Manager</span>
+                                        <ul class="rating mb_6 clearfix">
+                                            <li><i class="icon-26"></i></li>
+                                            <li><i class="icon-26"></i></li>
+                                            <li><i class="icon-26"></i></li>
+                                            <li><i class="icon-26"></i></li>
+                                            <li><i class="icon-26"></i></li>
+                                        </ul>
+                                        <p>“Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque etiam
+                                            nis quis at arcu nunc neque ac integer sit lobortis diam semper nulla duis
+                                            in blandit.”</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider">
+                                <div class="slide-track">
+                                    <div class="slide">
+                                        <img class="img" src="../assets/logos clientes/Ban_PRO.svg"
+                                            alt="" />
+                                    </div>
+                                    <div class="slide">
+                                        <img class="img" src="../assets/logos clientes/BANCO_INTER_.svg"
+                                            alt="" />
+                                    </div>
+                                    <div class="slide">
+                                        <img class="img" src="../assets/logos clientes/BBVA_.svg"
+                                            alt="" />
+                                    </div>
+                                    <div class="slide">
+                                        <img class="img" src="../assets/logos clientes/BCI_.svg"
+                                            alt="" />
+                                    </div>
+                                    <div class="slide">
+                                        <img class="img" src="../assets/logos clientes/BHV_CAPITAL_.svg"
+                                            alt="" />
+                                    </div>
+                                    <div class="slide">
+                                        <img class="img" src="../assets/logos clientes/BICE_FACT.svg"
+                                            alt="" />
+                                    </div>
+                                    <div class="slide">
+                                        <img class="img" src="../assets/logos clientes/BTG_PACTUAL.svg"
+                                            alt="" />
+                                    </div>
+                                    <div class="slide">
+                                        <img class="img" src="../assets/logos clientes/BV_FACT_.svg"
+                                            alt="" />
+                                    </div>
+                                    <div class="slide">
+                                        <img class="img" src="../assets/logos clientes/CCAPITA_.svg"
+                                            alt="" />
+                                    </div>
+                                    <div class="slide">
+                                        <img class="img" src="../assets/logos clientes/CONCRECES_.svg"
+                                            alt="" />
+                                    </div>
+                                    <div class="slide">
+                                        <img class="img" src="../assets/logos clientes/COVAL_.svg"
+                                            alt="" />
+                                    </div>
+                                    <div class="slide">
+                                        <img class="img" src="../assets/logos clientes/CRECER_.svg"
+                                            alt="" />
+                                    </div>
+                                    <div class="slide">
+                                        <img class="img" src="../assets/logos clientes/EURO_.svg"
+                                            alt="" />
+                                    </div>
+                                    <div class="slide">
+                                        <img class="img" src="../assets/logos clientes/Eurocapital.svg"
+                                            alt="" />
+                                    </div>
+                                    <div class="slide">
+                                        <img class="img" src="../assets/logos clientes/FACSUR_.svg"
+                                            alt="" />
+                                    </div>
+                                    <div class="slide">
+                                        <img class="img" src="../assets/logos clientes/FT_capital.svg"
+                                            alt="" />
+                                    </div>
+                                    <div class="slide">
+                                        <img class="img" src="../assets/logos clientes/HIMMEL_.svg"
+                                            alt="" />
+                                    </div>
+                                    <div class="slide">
+                                        <img class="img" src="../assets/logos clientes/INCOFIN_.svg"
+                                            alt="" />
+                                    </div>
+                                    <div class="slide">
+                                        <img class="img" src="../assets/logos clientes/INGE_.svg"
+                                            alt="" />
+                                    </div>
+                                    <div class="slide">
+                                        <img class="img" src="../assets/logos clientes/INTERFACTOR_.svg"
+                                            alt="" />
+                                    </div>
+                                    <div class="slide">
+                                        <img class="img" src="../assets/logos clientes/ITAU_.svg"
+                                            alt="" />
+                                    </div>
+                                    <div class="slide">
+                                        <img class="img" src="../assets/logos clientes/LATAM_TRADE.svg"
+                                            alt="" />
+                                    </div>
+                                    <div class="slide">
+                                        <img class="img" src="../assets/logos clientes/LATAM_TRADE_.svg"
+                                            alt="" />
+                                    </div>
+                                    <div class="slide">
+                                        <img class="img" src="../assets/logos clientes/MERCANTIL_.svg"
+                                            alt="" />
+                                    </div>
+                                    <div class="slide">
+                                        <img class="img"
+                                            src="../assets/logos clientes/NUEVO_CAPITAL.svg" alt="" />
+                                    </div>
+                                    <div class="slide">
+                                        <img class="img"
+                                            src="../assets/logos clientes/NUEVO_CAPITAL_F.svg" alt="" />
+                                    </div>
+                                    <div class="slide">
+                                        <img class="img" src="../assets/logos clientes/ORIENCOOP_.svg"
+                                            alt="" />
+                                    </div>
+                                    <div class="slide">
+                                        <img class="img" src="../assets/logos clientes/ORSAN_.svg"
+                                            alt="" />
+                                    </div>
+                                    <div class="slide">
+                                        <img class="img" src="../assets/logos clientes/SCOTIABANK_.svg"
+                                            alt="" />
+                                    </div>
+                                    <div class="slide">
+                                        <img class="img" src="../assets/logos clientes/SECURITY_.svg"
+                                            alt="" />
+                                    </div>
+                                    <div class="slide">
+                                        <img class="img" src="../assets/logos clientes/SIETE_CUM_.svg"
+                                            alt="" />
+                                    </div>
+                                    <div class="slide">
+                                        <img class="img" src="../assets/logos clientes/SIMPLI_.svg"
+                                            alt="" />
+                                    </div>
+                                    <div class="slide">
+                                        <img class="img" src="../assets/logos clientes/ST_CAPITAL_.svg"
+                                            alt="" />
+                                    </div>
+                                    <div class="slide">
+                                        <img class="img" src="../assets/logos clientes/TFINANCIO_.svg"
+                                            alt="" />
+                                    </div>
+                                    <div class="slide">
+                                        <img class="img" src="../assets/logos clientes/TU_FACT.svg"
+                                            alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="et-slide glass2" id="contactos">
+                        <h1 class="px-2 py-3 mb-0  mt-0 h-login shadow-out">CONTACTO</h1>
+                        <footer class="main-footer">
+                            <div class="auto-container" style="margin-bottom: 4%;">
+                                <div class="card  rounded-4 bg-transparent border-4 shadow-in glass2">
+                                    <div class="card-body p-2">
+                                        <div class="row">
+                                            <div class="col-md-8">
+                                                <form class="my-form">
+                                                    <div class="container">
+                                                        <h1></h1>
+                                                        <ul>
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                    <select>
+                                                                        <option selected disabled>-- Por favor Elige una
+                                                                            Opción --</option>
+                                                                        <option>Consulta Productos</option>
+                                                                        <option>Consulta Servicios</option>
+                                                                        <option>Otros</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                    <div class="grid grid-2">
+                                                                        <input type="text" class="form-control"
+                                                                            placeholder="Nombre" required>
+                                                                        <input type="text" class="form-control "
+                                                                            placeholder="Apeliido" required>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                    <div class="grid grid-2">
+                                                                        <input type="email" class="form-control "
+                                                                            placeholder="Email" required>
+                                                                        <input type="tel" class="form-control "
+                                                                            placeholder="Telefono">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                    <textarea class="form-control"
+                                                                        placeholder="Mensaje"></textarea>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-auto">
+                                                                    <input type="checkbox" id="terms">
+                                                                    <label for="terms">yo eh leido y aceptado <a
+                                                                            href="">los terminos y
+                                                                            condiciones</a></label>
+                                                                </div>
+                                                                <div class="col-auto">
+                                                                    <div class="required-msg">Obligatorio</div>
+                                                                </div>
+                                                                <div class="col">
+
+                                                                    <div class="btn-group d-flex">
+                                                                        <button class="btn-grid btn w-100" type="submit"
+                                                                            disabled>
+                                                                            <span class="back">
+                                                                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/email-icon.svg"alt="">
+                                                                            </span>
+                                                                            <span class="front">Enviar</span>
+                                                                        </button>
+                                                                        <button class="btn-grid btn w-100" type="reset"
+                                                                            disabled>
+                                                                            <span class="back">
+                                                                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/eraser-icon.svg"alt="">
+                                                                            </span>
+                                                                            <span class="front">Limpiar</span>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                    </div>
+                                                    <div class="row mt-4">
+                                                        <div class="col-12 col-sm-12 col-lg-3">
+                                                            <div class="dbox w-100 text-center">
+                                                                <div class="icon d-flex align-items-center justify-content-center " >
+                                                                    <span
+                                                                        class="fa fa-map-marker fa-3x text-danger shadow-in rounded-circle" style="height: 11vh; width: 11vh; align-content: center;"></span>
+                                                                </div>
+                                                                <div class="text my-2">
+                                                                    <p>Av. Lib. Bdo.O'higgins 1146-B 5°Piso</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-sm-12 col-lg-3">
+                                                            <div class="dbox w-100 text-center">
+                                                                <div
+                                                                    class="icon d-flex align-items-center justify-content-center">
+                                                                    <span class="fa fa-phone fa-3x text-danger shadow-in rounded-circle" style="height: 11vh; width: 11vh; align-content: center;"></span>
+                                                                </div>
+                                                                <div class="text my-2"><p><a href="tel://1234567920">(56) 22 675 3200</a></p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-sm-12 col-lg-3">
+                                                            <div class="dbox w-100 text-center">
+                                                                <div
+                                                                    class="icon d-flex align-items-center justify-content-center">
+                                                                    <span class="fa fa-paper-plane fa-3x text-danger shadow-in rounded-circle" style="height: 11vh; width: 11vh; align-content: center;"></span>
+                                                                </div>
+                                                                <div class="text my-2">
+                                                                    <p><a href="mailto:dimension@dim.cl">dimension@dim.cl</a>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-sm-12 col-lg-3">
+                                                            <div class="dbox w-100 text-center">
+                                                                <div
+                                                                    class="icon d-flex align-items-center justify-content-center">
+                                                                    <span class="fa fa-globe fa-3x text-danger shadow-in rounded-circle" style="height: 11vh; width: 11vh; align-content: center;"></span>
+                                                                </div>
+                                                                <div class="text my-2">
+                                                                    <p><span>SitioWeb</span> <a href="#http://dim.cl/">dim.cl</a></p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="col-md-4 ">
+                                                <gmp-map class="map" center="-33.444694474536895, -70.65212728935253" zoom="17"
+                                                    map-id="DEMO_MAP_ID">
+                                                    <gmp-advanced-marker
+                                                        position="-33.444694474536895, -70.65212728935253"
+                                                        title="DIMENSION S.A."></gmp-advanced-marker></gmp-map>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="footer-bottom centred py-2 fixed-bottom">
+                                <div class="auto-container3">
+                                    <div class="copyright">
+                                        <p class="text-dark">Copyright 2024 <a href="index.html">Dimensión S.A.</a>.
+                                            todos los derechos reservados.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </footer>
+                    </section>
+                </main>
+            </div>
+        </div>
+        <!--Scroll to top-->
+        <div class="scroll-to-top">
+            <div>
+                <div class="scroll-top-inner">
+                    <div class="scroll-bar">
+                        <div class="bar-inner"></div>
+                    </div>
+                    <div class="scroll-bar-text">Inicio</div>
+                </div>
+            </div>
+        </div>
+        <!-- Scroll to top end -->
+    </div>
+    <!-- dim core js -->
+    <script src="../assets/js/vendor.min.js"></script>
+    <script src="../assets/js/app.min.js"></script>
+    <script src="../assets/js/slider.js"></script>
+
+    <!-- experimental web js -->
+    <script src="assets/js/jQuery.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/owl.js"></script>
+    <script src="../assets/js/wow.js"></script>
+    <script src="../assets/js/validation.js"></script>
+    <script src="../assets/js/jquery.fancybox.js"></script>
+    <script src="../assets/js/appear.js"></script>
+    <script src="../assets/js/isotope.js"></script>
+    <script src="../assets/js/parallax-scroll.js"></script>
+    <script src="../assets/js/jquery.nice-select.min.js"></script>
+    <script src="../assets/js/jQuery.style.switcher.min.js"></script>
+    <script src="../assets/js/emi-calculator.js"></script>
+    <script src="../assets/js/pagenav.js"></script>
+    <!-- main-js -->
+    <script src="../assets/js/script.js"></script>
+    <script>
+        const checkbox = document.querySelector('.my-form input[type="checkbox"]');
+        const btns = document.querySelectorAll(".my-form button");
+
+        checkbox.addEventListener("change", function () {
+            const checked = this.checked;
+            for (const btn of btns) {
+                checked ? (btn.disabled = false) : (btn.disabled = true);
+            }
+        });
+    </script>
+    <!-- preloader config -->
+    <script type="text/javascript">
+        function handlePreloader() {
+            if ($('.loader-wrap').length) {
+                $('.loader-wrap').delay(3000).fadeOut(500);
+            }
+        }
+        if ($(".preloader-close").length) {
+            $(".preloader-close").on("click", function () {
+                $('.loader-wrap').delay(200).fadeOut(500);
+            })
+        }
+        $(window).on('load', function () {
+            handlePreloader();
+
+        });
+    </script>
+    <!-- preloader config -->
+</body>
+
+</html>

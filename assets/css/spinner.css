@@ -1,0 +1,479 @@
+﻿.contents {
+    width: 100%;
+    /* height: 100vh;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    position: fixed;
+    top: -100px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+/*-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
+.s1 {
+    left: 50%;
+    top: 50%;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 9px solid #ffffff6b;
+    background-color: rgb(106 46 146);
+    background: transparent;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: #ffffff3b;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+.s2:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    border-top-color: #ffffff2e;
+    -webkit-animation: spin 3s linear infinite;
+    animation: spin 3s linear infinite;
+}
+
+.s3:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    border-top-color: #ffffff49;
+    -webkit-animation: spin 1.5s linear infinite;
+    animation: spin 1.5s linear infinite;
+}
+
+.loader-image-wrapper {
+    position: absolute;
+    width: 105px;
+    height: 95px;
+    /* border-radius: 50%; */
+    /* overflow: hidden; */
+    margin-left: 0%;
+}
+
+.loader-inner img {
+    position: absolute;
+    width: 100px !important;
+    /*height: 140px !important;*/
+}
+
+.loader-image {
+    /* animation: loader-pre-app-animation 2s infinite;*/
+    z-index: 8;
+    background-color: #ff6a00;
+    background-position: center center;
+    background-size: cover;
+}
+
+.contents .img-1 {
+    /*animation: loader-image-1;*/
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    border-radius: 0%;
+}
+
+.contents .img-2 {
+    /*animation: loader-image-2;*/
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    border-radius: 0%;
+}
+
+.contents .img-3 {
+    /*animation: loader-image-3;*/
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    border-radius: 0%;
+}
+
+.contents .img-4 {
+    /*animation: loader-image-4;*/
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    border-radius: 0%;
+}
+/*------------------------------------*/
+@keyframes loader-image-1 {
+    0% {
+        width: 0px;
+        height: 0px;
+        top: 50%;
+        left: 50%
+    }
+
+    5% {
+        width: 100%;
+        height: 100%;
+        top: 0%;
+        left: 0%
+    }
+
+    20% {
+        width: 100%;
+        height: 100%;
+        top: 0%;
+        left: 0%
+    }
+
+    25% {
+        width: 0px;
+        height: 0px;
+        top: 50%;
+        left: 50%
+    }
+
+    100% {
+        width: 0px;
+        height: 0px;
+        top: 50%;
+        left: 50%
+    }
+}
+
+@keyframes loader-image-2 {
+    0% {
+        width: 0px;
+        height: 0px;
+        top: 50%;
+        left: 50%
+    }
+
+    25% {
+        width: 0px;
+        height: 0px;
+        top: 50%;
+        left: 50%
+    }
+
+    30% {
+        width: 100%;
+        height: 100%;
+        top: 0%;
+        left: 0%
+    }
+
+    45% {
+        width: 100%;
+        height: 100%;
+        top: 0%;
+        left: 0%
+    }
+
+    50% {
+        width: 0px;
+        height: 0px;
+        top: 50%;
+        left: 50%
+    }
+
+    100% {
+        width: 0px;
+        height: 0px;
+        top: 50%;
+        left: 50%
+    }
+}
+
+@keyframes loader-image-3 {
+    0% {
+        width: 0px;
+        height: 0px;
+        top: 50%;
+        left: 50%
+    }
+
+    50% {
+        width: 0px;
+        height: 0px;
+        top: 50%;
+        left: 50%
+    }
+
+    55% {
+        width: 100%;
+        height: 100%;
+        top: 0%;
+        left: 0%
+    }
+
+    70% {
+        width: 100%;
+        height: 100%;
+        top: 0%;
+        left: 0%
+    }
+
+    75% {
+        width: 0px;
+        height: 0px;
+        top: 50%;
+        left: 50%
+    }
+
+    100% {
+        width: 0px;
+        height: 0px;
+        top: 50%;
+        left: 50%
+    }
+}
+
+@keyframes loader-image-4 {
+    0% {
+        width: 0px;
+        height: 0px;
+        top: 50%;
+        left: 50%
+    }
+
+    75% {
+        width: 0px;
+        height: 0px;
+        top: 50%;
+        left: 50%
+    }
+
+    80% {
+        width: 100%;
+        height: 100%;
+        top: 0%;
+        left: 0%
+    }
+
+    90% {
+        width: 100%;
+        height: 100%;
+        top: 0%;
+        left: 0%
+    }
+
+    95% {
+        width: 0px;
+        height: 0px;
+        top: 50%;
+        left: 50%
+    }
+
+    100% {
+        width: 0px;
+        height: 0px;
+        top: 50%;
+        left: 50%
+    }
+}
+/*-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
+@-webkit-keyframes {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+/* Preloader */
+
+.handle-preloader {
+    align-items: center;
+    -webkit-align-items: center;
+    display: flex;
+    display: -ms-flexbox;
+    height: 100%;
+    justify-content: center;
+    -webkit-justify-content: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    background: linear-gradient(47deg, rgba(129,0,36,1) 0%, rgba(210,16,71,1) 50%, rgba(85,0,24,1) 100%);
+}
+
+.preloader-close {
+    position: fixed;
+    z-index: 99999999;
+    font-size: 14px;
+    background: #fff;
+    color: red;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    right: 30px;
+    top: 30px;
+    font-weight: 400;
+}
+
+.handle-preloader .animation-preloader {
+    position: absolute;
+    z-index: 100;
+}
+
+    .handle-preloader .animation-preloader .spinner {
+        animation: spinner 1s infinite linear;
+        border-radius: 50%;
+        height: 150px;
+        margin: 0 auto 45px auto;
+        width: 150px;
+    }
+
+    .handle-preloader .animation-preloader .txt-loading {
+        text-align: center;
+        user-select: none;
+    }
+
+        .handle-preloader .animation-preloader .txt-loading .letters-loading:before {
+            animation: letters-loading 2s infinite;
+            content: attr(data-text-preloader);
+            left: 0;
+            opacity: 0;
+            top: 0;
+            position: absolute;
+        }
+
+        .handle-preloader .animation-preloader .txt-loading .letters-loading {
+            font-family: Dim-Regular;
+            font-size: 2.8em !important;
+            font-weight: 500;
+            letter-spacing: 1px;
+            display: inline-block;
+            position: relative;
+            line-height: 60px;
+            /*text-transform: uppercase;*/
+            color: transparent;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: rgba(255, 255, 255, 0.30);
+        }
+
+            .handle-preloader .animation-preloader .txt-loading .letters-loading:nth-child(2):before {
+                animation-delay: 0.2s;
+            }
+
+            .handle-preloader .animation-preloader .txt-loading .letters-loading:nth-child(3):before {
+                animation-delay: 0.4s;
+            }
+
+            .handle-preloader .animation-preloader .txt-loading .letters-loading:nth-child(4):before {
+                animation-delay: 0.6s;
+            }
+
+            .handle-preloader .animation-preloader .txt-loading .letters-loading:nth-child(5):before {
+                animation-delay: 0.8s;
+            }
+
+            .handle-preloader .animation-preloader .txt-loading .letters-loading:nth-child(6):before {
+                animation-delay: 1s;
+            }
+
+            .handle-preloader .animation-preloader .txt-loading .letters-loading:nth-child(7):before {
+                animation-delay: 1.2s;
+            }
+
+            .handle-preloader .animation-preloader .txt-loading .letters-loading:nth-child(8):before {
+                animation-delay: 1.4s;
+            }
+
+            .handle-preloader .animation-preloader .txt-loading .letters-loading:nth-child(9):before {
+                animation-delay: 1.6s;
+            }
+
+            .handle-preloader .animation-preloader .txt-loading .letters-loading:nth-child(10):before {
+                animation-delay: 1.8s;
+            }
+
+.handle-preloader .loader-section {
+    background-color: #ffffff;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    width: calc(50% + 1px);
+}
+
+.preloader .loaded .animation-preloader {
+    opacity: 0;
+    transition: 0.3s ease-out;
+}
+
+.handle-preloader .animation-preloader .txt-loading .letters-loading:before {
+    color: #ffffff;
+}
+
+.handle-preloader .animation-preloader .spinner {
+    border: 3px solid #ffffff;
+    background-image: url();
+    background-size: 150px;
+    background-repeat: no-repeat;
+    border-top-color: rgba(255, 255, 255, 0.5);
+}
+
+/* AnimaciÃƒÂ³n del preloader */
+@keyframes spinner {
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+@keyframes letters-loading {
+    0%, 75%, 100% {
+        opacity: 0;
+        transform: rotateY(-90deg);
+    }
+
+    25%, 50% {
+        opacity: 1;
+        transform: rotateY(0deg);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .handle-preloader .animation-preloader .spinner {
+        height: 8em;
+        width: 8em;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .handle-preloader .animation-preloader .spinner {
+        height: 7em;
+        width: 7em;
+    }
+
+    .handle-preloader .animation-preloader .txt-loading .letters-loading {
+        font-size: 25px;
+        letter-spacing: 10px;
+    }
+}
